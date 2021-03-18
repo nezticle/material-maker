@@ -501,6 +501,52 @@
 					}
 				]
 			},
+			"QtQuick3D": {
+				"export_extension":"qml",
+				"files": [
+					{
+						"type":"texture",
+						"file_name":"$(path_prefix)_baseColor.png",
+						"output":0,
+						"conditions":"$(connected:albedo_tex)"
+					},
+					{
+						"type":"texture",
+						"file_name":"$(path_prefix)_occlusionRoughnessMetallic.png",
+						"output":1,
+						"conditions":"$(connected:ao_tex) or $(connected:roughness_tex) or $(connected:metallic_tex)"
+					},
+					{
+						"type":"texture",
+						"file_name":"$(path_prefix)_emission.png",
+						"output":2,
+						"conditions":"$(connected:emission_tex)"
+					},
+					{
+						"type":"texture",
+						"file_name":"$(path_prefix)_normal.png",
+						"output":3,
+						"conditions":"$(connected:normal_tex)"
+					},
+					{
+						"type":"texture",
+						"file_name":"$(path_prefix)_depth.png",
+						"output":4,
+						"conditions":"$(connected:depth_tex)"
+					},
+					{
+						"type":"texture",
+						"file_name":"$(path_prefix)_sss.png",
+						"output":5,
+						"conditions":"$(connected:sss_tex)"
+					},
+					{
+						"type":"template",
+						"file_name":"$(path_prefix).qml",
+						"template":"qtmaterial.qml.tmpl"
+					}
+				]
+			},
 		},
 		"parameters": [
 			{
