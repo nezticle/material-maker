@@ -525,7 +525,7 @@
 					{
 						"type":"texture",
 						"file_name":"$(path_prefix)_normal.png",
-						"output":3,
+						"output":7,
 						"conditions":"$(connected:normal_tex)"
 					},
 					{
